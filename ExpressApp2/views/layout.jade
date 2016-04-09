@@ -1,0 +1,28 @@
+﻿doctype
+html
+    head
+        title #{title}  - My Site
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        script.
+            var Connection = require('tedious').Connection;
+            var config = {
+                userName: 'rahul_appdeveloper',
+                password: 'ILoveCalifornia123',
+                server: 'dxball-db.database.windows.net',
+                options: {encrypt: true, database: 'dxball_db'}
+            };
+            var connection = new Connection(config);
+            connection.on('connect', function(err){
+                 alert("Connected man!!")
+            });
+    body
+       
+        header
+            h1 My Sitr
+        .container
+            .main-content
+                block content
+            .side-bar
+                block sidebar
+        footer
+            p Running code using Express and  Jade!!!!

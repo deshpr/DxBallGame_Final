@@ -1,0 +1,2 @@
+c:\users\rahul\documents\visual studio 2015\Projects\ExpressApp2\ExpressApp2\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\Rahul\documents\visual studio 2015\Projects\ExpressApp2\ExpressApp2\obj\Debug\ExpressApp2.njsprojResolveAssemblyReference.cache

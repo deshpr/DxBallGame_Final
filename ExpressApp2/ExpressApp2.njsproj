@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>ExpressApp2</Name>
+    <RootNamespace>ExpressApp2</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>12318089-1d87-4058-8d51-fe325c12adf0</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>app.ts</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <NodejsPort>1337</NodejsPort>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+    <EnableTypeScript>true</EnableTypeScript>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="routes\index.ts" />
+    <TypeScriptCompile Include="routes\user.ts" />
+    <TypeScriptCompile Include="public\javascripts\Game\DxBallGame\MyGame.ts" />
+    <TypeScriptCompile Include="public\javascripts\Game\Engine\Camera.ts" />
+    <TypeScriptCompile Include="public\javascripts\Game\Engine\Core\Engine_Core.ts" />
+    <TypeScriptCompile Include="public\javascripts\Game\Engine\Core\Engine_GameInput.ts" />
+    <TypeScriptCompile Include="public\javascripts\Game\Engine\Core\Engine_GameLoop.ts" />
+    <TypeScriptCompile Include="public\javascripts\Game\Engine\Core\Engine_VertexBuffer.ts" />
+    <TypeScriptCompile Include="public\javascripts\Game\Engine\Core\Resources\Engine_TextFileLoader.ts" />
+    <TypeScriptCompile Include="public\javascripts\Game\Engine\Core\Resources\FileLoader.ts" />
+    <TypeScriptCompile Include="public\javascripts\Game\Engine\Core\Resources\ResourceMap.ts" />
+    <TypeScriptCompile Include="public\javascripts\Game\Engine\Renderable.ts" />
+    <TypeScriptCompile Include="public\javascripts\Game\Engine\SimpleShader.ts" />
+    <TypeScriptCompile Include="public\javascripts\Game\Engine\Transform.ts" />
+    <TypeScriptCompile Include="public\javascripts\Game\lib\gl-matrix.d.ts" />
+    <TypeScriptCompile Include="public\javascripts\Game\ShaderSupport.ts" />
+    <TypeScriptCompile Include="public\javascripts\Game\VertexSquareBuffer.ts" />
+    <TypeScriptCompile Include="Scripts\typings\express\express.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\node\node.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\stylus\stylus.d.ts" />
+    <Content Include="package.json" />
+    <Content Include="public\stylesheets\style.styl" />
+    <Content Include="README.md" />
+    <Content Include="public\javascripts\Game\GLSLShaders\SimpleVS.glsl" />
+    <Content Include="public\javascripts\Game\GLSLShaders\WhiteFS.glsl" />
+    <Content Include="public\stylesheets\main.styl" />
+    <Content Include="Styles\style.styl" />
+    <Content Include="views\game4.jade" />
+    <Content Include="views\game.jade" />
+    <Content Include="views\index.jade" />
+    <Content Include="views\layout.jade" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="public\javascripts\Game\" />
+    <Folder Include="public\javascripts\Game\Engine\Core\Resources\" />
+    <Folder Include="public\javascripts\Game\lib\" />
+    <Folder Include="public\javascripts\Game\Engine\Core\" />
+    <Folder Include="public\javascripts\Game\Engine\" />
+    <Folder Include="public\javascripts\Game\GLSLShaders\" />
+    <Folder Include="public\javascripts\Game\DxBallGame\" />
+    <Folder Include="Styles\" />
+    <Folder Include="public\" />
+    <Folder Include="public\images\" />
+    <Folder Include="public\javascripts\" />
+    <Folder Include="public\stylesheets\" />
+    <Folder Include="routes\" />
+    <Folder Include="Scripts\" />
+    <Folder Include="Scripts\typings\" />
+    <Folder Include="Scripts\typings\express\" />
+    <Folder Include="Scripts\typings\node\" />
+    <Folder Include="Scripts\typings\stylus\" />
+    <Folder Include="views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="public\javascripts\Game\lib\gl-matrix.js" />
+    <Compile Include="Scripts\index.js" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
